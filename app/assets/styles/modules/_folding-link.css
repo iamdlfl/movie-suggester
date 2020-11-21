@@ -1,0 +1,52 @@
+/* Folding links may require a parent element that has overflow: hidden; */
+
+.folding-link {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $lightBlue;
+    position: absolute;
+    background-color: $black;
+    height: 100%;
+    width: 30%;
+    z-index: 0;
+
+    &--left {
+        left: 0;
+        transform: rotate(45deg) scaleY(2) translateX(-60%);
+        transition: all 0.5s ease-in-out;
+        
+        &:hover {
+            transform: rotate(0) scaleY(1) translateX(0);
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    &--right {
+        right: 0;
+        transform: rotate(-45deg) scaleY(2) translateX(60%);
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            transform: rotate(0) scaleY(1) translateX(0);
+            transition: all 0.5s ease-in-out;
+
+        }
+    }
+
+    &--text {
+        position: absolute;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        z-index: 1;
+
+        &--left {
+            left: 1em;
+        }
+
+        &--right {
+            right: 1em;
+        }
+    }
+}
+

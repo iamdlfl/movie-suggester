@@ -1,0 +1,17 @@
+.banner {
+    background: $red;
+    min-height: 20rem;
+    position: relative;
+    overflow: hidden;
+
+    &--center-text {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        
+    }
+
+}

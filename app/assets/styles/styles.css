@@ -1,0 +1,6 @@
+@import 'normalize.css';
+@import './global/_variables.css';
+@import './global/_global.css';
+@import './modules/_navbar.css';
+@import './modules/_banner.css';
+@import './modules/_folding-link.css'
