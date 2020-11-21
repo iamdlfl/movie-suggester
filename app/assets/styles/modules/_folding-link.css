@@ -9,29 +9,30 @@
     height: 100%;
     width: 30%;
     z-index: 0;
+    
 
     &--left {
         left: 0;
         transform: rotate(45deg) scaleY(2) translateX(-60%);
         transition: all 0.5s ease-in-out;
-        
-        &:hover {
+        &--hover {
             transform: rotate(0) scaleY(1) translateX(0);
             transition: all 0.5s ease-in-out;
         }
+        
     }
-
+    
     &--right {
         right: 0;
         transform: rotate(-45deg) scaleY(2) translateX(60%);
         transition: all 0.5s ease-in-out;
-
-        &:hover {
+        &--hover {
             transform: rotate(0) scaleY(1) translateX(0);
             transition: all 0.5s ease-in-out;
-
         }
     }
+    
+    
 
     &--text {
         position: absolute;
@@ -42,6 +43,13 @@
 
         &--left {
             left: 1em;
+
+            &--des {
+                font-size: 1em;
+                left: 3em;
+                top: 5em;
+                max-width: 15em;
+            }
         }
 
         &--right {
