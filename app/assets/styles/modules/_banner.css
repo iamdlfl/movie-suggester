@@ -1,17 +1,25 @@
 .banner {
     background: $red;
-    min-height: 20rem;
+    min-height: 23rem;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 
     &--center-text {
+        @media (max-width: $medium) {
+            font-size: 1.8rem;
+        }
+        @media (max-width: $small) {
+            display: none;
+        }
         font-size: 3rem;
         letter-spacing: 0.5rem;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        
+        z-index: 1;
+        cursor: default;
     }
 
 }

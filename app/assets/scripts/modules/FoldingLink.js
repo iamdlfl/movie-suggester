@@ -1,36 +1,34 @@
 class FoldingLink {
     constructor() {
-        this.leftBackground = document.querySelector('.folding-link--left');
-        this.rightBackground = document.querySelector('.folding-link--right');
-        this.leftLink = document.querySelector('.folding-link--text--left');
-        this.rightLink = document.querySelector('.folding-link--text--right');
+        this.leftBG = document.querySelector('.folding-link__background--left');
+        this.rightBG = document.querySelector('.folding-link__background--right');
+        this.leftIT = document.querySelector('.folding-link__info-text--left');
+        this.rightIT = document.querySelector('.folding-link__info-text--right');
+        this.leftMT = document.querySelector('.folding-link__main-text--left');
+        this.rightMT = document.querySelector('.folding-link__main-text--right');
         this.events();
     }
 
     events() {
-        this.leftBackground.addEventListener('mouseover', function () {
-            this.classList.add('folding-link--left--hover');
+        this.leftAdd(this.leftBG, this.leftBG, this.leftIT);
+        this.leftAdd(this.leftIT, this.leftBG, this.leftIT);
+        this.leftAdd(this.leftMT, this.leftBG, this.leftIT);
+        this.rightAdd(this.rightBG, this.rightBG, this.rightIT);
+        this.rightAdd(this.rightIT, this.rightBG, this.rightIT);
+        this.rightAdd(this.rightMT, this.rightBG, this.rightIT);
+    }
+
+    leftAdd(addee, addclass1, addclass2) {
+        addee.addEventListener('click', () => {
+            addclass1.classList.add('folding-link__background--left--extended')
+            addclass2.classList.add('folding-link__info-text--left--visible')
         })
-        this.leftBackground.addEventListener('mouseleave', function () {
-            this.classList.remove('folding-link--left--hover');
-        })
-        this.leftLink.addEventListener('mouseover', () => {
-            this.leftBackground.classList.add('folding-link--left--hover');
-        })
-        this.leftLink.addEventListener('mouseleave', () => {
-            this.leftBackground.classList.remove('folding-link--left--hover');
-        })
-        this.rightBackground.addEventListener('mouseover', function () {
-            this.classList.add('folding-link--right--hover');
-        })
-        this.rightBackground.addEventListener('mouseleave', function () {
-            this.classList.remove('folding-link--right--hover');
-        })
-        this.rightLink.addEventListener('mouseover', () => {
-            this.rightBackground.classList.add('folding-link--right--hover');
-        })
-        this.rightLink.addEventListener('mouseleave', () => {
-            this.rightBackground.classList.remove('folding-link--right--hover');
+    }
+
+    rightAdd(addee, addclass1, addclass2) {
+        addee.addEventListener('click', () => {
+            addclass1.classList.add('folding-link__background--right--extended')
+            addclass2.classList.add('folding-link__info-text--right--visible')
         })
     }
 }
