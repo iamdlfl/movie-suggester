@@ -3,4 +3,6 @@
 @import './global/_global.css';
 @import './modules/_navbar.css';
 @import './modules/_banner.css';
-@import './modules/_folding-link.css'
+@import './modules/_folding-link.css';
+@import './modules/_main.css';
+@import './modules/_spotlight.css';

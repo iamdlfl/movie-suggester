@@ -4,6 +4,7 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
+    margin-bottom: 0;
 
     &--center-text {
         @media (max-width: $medium) {
@@ -17,9 +18,23 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-49.5%) translateY(-50%);
         z-index: 1;
         cursor: default;
+
+        &__C {
+            display: inline-block;
+            &-spotlight {
+                @media (max-width: $medium) {
+                    transform: translateY(0) rotate(0);
+                }
+                transition: transform 1s ease-out;
+                transform: translateY(0.3em) rotate(90deg);
+            }
+        }
     }
+
+
+
 
 }
