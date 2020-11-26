@@ -17,7 +17,7 @@ class Spotlight {
     calculateIfScrolledTo(el) {
         if (window.scrollY + this.windowHeight > el.offsetTop) {
             let scrollPercent = (el.getBoundingClientRect().y / this.windowHeight) * 100;
-            if (scrollPercent < 40) {
+            if (scrollPercent < 20) {
                 this.spotlightC.classList.add('banner--center-text__C-spotlight');
                 this.light.classList.add('spotlight--visible');
                 this.shadow.classList.add('main-content__shadow--visible');

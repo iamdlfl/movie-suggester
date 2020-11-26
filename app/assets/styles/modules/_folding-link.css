@@ -2,6 +2,30 @@
 
 .folding-link {
 
+    &__arrow {
+        &--invisible {
+            transition: opacity 1s ease-in;
+            opacity: 0;
+        }
+        &--right {
+            position: absolute;
+            color: rgba($offWhite, 0.05);
+            font-size: 3em;
+            top: 50%;
+            transform: translateY(-50%) scaleY(3) scaleX(2) translateX(50%);
+            left: 0;
+        }
+
+        &--left {
+            position: absolute;
+            color: rgba($offWhite, 0.05);
+            font-size: 3em;
+            top: 50%;
+            transform: translateY(-50%) scaleY(3) scaleX(2) translateX(-50%);
+            right: 0;
+        }
+    }
+
     &__background {
         background-color: $black;
         z-index: 2;
