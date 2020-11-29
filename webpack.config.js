@@ -89,6 +89,7 @@ if (currentTask == "devserv") {
     config.mode = 'development'
 }
 
+
 // Config settings to build for production
 if (currentTask == "build") {
     cssConfig.use.unshift(MiniCssExtractPlugin.loader);
